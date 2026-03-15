@@ -1,0 +1,26 @@
+{
+  "name": "chemistry-game",
+  "version": "1.0.0",
+  "description": "Chemistry learning game with research mechanics, technology progression, and world impact simulation.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirichovka/Chemistry-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirichovka/Chemistry-Game/issues"
+  },
+  "homepage": "https://github.com/Kirichovka/Chemistry-Game#readme",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "sass": "^1.98.0"
+  }
+}
