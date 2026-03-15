@@ -1,0 +1,41 @@
+{
+  "schema": "1.0",
+  "entity": "compound",
+  "items": [
+    {
+      "id": "water",
+      "type": "compound",
+      "formula": "H2O",
+      "name": "Water",
+      "category": "inorganic",
+      "state": "liquid",
+      "description": "A basic compound required for atmosphere, oceans and life systems.",
+      "composition": {
+        "parts": [
+          { "id": "hydrogen", "count": 2 },
+          { "id": "oxygen", "count": 1 }
+        ]
+      },
+      "card": {
+        "color": "#4FC3F7",
+        "icon": "H2O",
+        "rarity": "common"
+      },
+      "properties": {
+        "molecularMass": 18.015,
+        "meltingPointC": 0,
+        "boilingPointC": 100
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 5
+      },
+      "links": {
+        "reactions": ["water_synthesis", "electrolysis_of_water"],
+        "technologies": ["water_technology", "atmosphere"],
+        "encyclopediaEntryId": "water"
+      }
+    }
+  ]
+}

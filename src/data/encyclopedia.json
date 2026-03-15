@@ -1,0 +1,37 @@
+{
+  "schema": "1.0",
+  "entity": "encyclopediaEntry",
+  "items": [
+    {
+      "id": "water",
+      "type": "encyclopediaEntry",
+      "title": "Water",
+      "linkedCardId": "water",
+      "entryCategory": "compound",
+      "isHiddenUntilDiscovered": true,
+      "summary": "Water is a compound made of hydrogen and oxygen.",
+      "properties": {
+        "formula": "H2O",
+        "state": "liquid",
+        "category": "oxide",
+        "molecularMass": 18.015,
+        "meltingPointC": 0,
+        "boilingPointC": 100,
+        "structure": "bent"
+      },
+      "education": {
+        "reactions": ["water_synthesis", "electrolysis_water"],
+        "uses": ["life", "oceans", "climate"],
+        "technologies": ["water_technology", "ocean_formation"]
+      },
+      "media": {
+        "structure2D": "structures/water-2d.svg",
+        "structure3D": null
+      },
+      "links": {
+        "relatedEntries": ["hydrogen", "oxygen"],
+        "labAvailable": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "1.0",
+  "entity": "process",
+  "items": [
+    {
+      "id": "photosynthesis",
+      "type": "process",
+      "name": "Photosynthesis",
+      "description": "Plants convert carbon dioxide and sunlight into oxygen.",
+      "category": "biological",
+      "inputs": {
+        "resources": {
+          "carbonDioxide": 2,
+          "water": 1,
+          "energy": 3
+        }
+      },
+      "outputs": {
+        "resources": {
+          "oxygen": 2
+        }
+      },
+      "effects": [
+        "increase_oxygen",
+        "increase_biodiversity"
+      ],
+      "rules": {
+        "repeatable": true,
+        "interval": 30,
+        "requiresActivation": false
+      },
+      "requirements": {
+        "technologies": ["photosynthesis"],
+        "worldFlags": ["hasPlants"],
+        "biomes": ["forest"]
+      },
+      "visuals": {
+        "icon": "leaf",
+        "color": "#4CAF50"
+      }
+    }
+  ]
+}

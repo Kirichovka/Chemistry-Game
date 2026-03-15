@@ -1,0 +1,64 @@
+{
+  "schema": "1.0",
+  "entity": "condition",
+  "items": [
+    {
+      "id": "high_temperature",
+      "type": "condition",
+      "name": "High temperature",
+      "category": "temperature",
+      "description": "Requires elevated temperature for the reaction to proceed.",
+      "parameter": {
+        "key": "temperatureC",
+        "valueType": "number",
+        "unit": "C",
+        "min": 100,
+        "max": 2000,
+        "default": 300
+      },
+      "gameplay": {
+        "availableByDefault": true,
+        "usableInLab": true,
+        "visibleInTests": true
+      },
+      "ui": {
+        "icon": "thermometer",
+        "color": "#FF7043",
+        "order": 1
+      },
+      "links": {
+        "relatedReactions": ["water_synthesis"],
+        "requiredTechnologies": []
+      }
+    },
+    {
+      "id": "high_pressure",
+      "type": "condition",
+      "name": "High pressure",
+      "category": "pressure",
+      "description": "Applies increased pressure to the reaction system.",
+      "parameter": {
+        "key": "pressureAtm",
+        "valueType": "number",
+        "unit": "atm",
+        "min": 2,
+        "max": 500,
+        "default": 10
+      },
+      "gameplay": {
+        "availableByDefault": true,
+        "usableInLab": true,
+        "visibleInTests": true
+      },
+      "ui": {
+        "icon": "gauge",
+        "color": "#42A5F5",
+        "order": 2
+      },
+      "links": {
+        "relatedReactions": [],
+        "requiredTechnologies": []
+      }
+    }
+  ]
+}

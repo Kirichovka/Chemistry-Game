@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "entity": "card",
+  "items": [
+    {
+      "id": "card_hydrogen",
+      "type": "card",
+      "cardType": "element",
+      "entityId": "hydrogen",
+      "name": "Hydrogen",
+      "shortLabel": "H",
+      "description": "Basic chemical element.",
+      "appearance": {
+        "theme": "element",
+        "color": "#A8D8FF",
+        "icon": "atom",
+        "image": null,
+        "rarity": "common"
+      },
+      "layout": {
+        "size": "medium",
+        "showSymbol": true,
+        "showName": true,
+        "showDescription": false,
+        "animationPreset": "fade"
+      },
+      "interaction": {
+        "draggable": true,
+        "selectable": true,
+        "stackable": true,
+        "usableInLab": true
+      },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true,
+        "showInRewards": true
+      },
+      "sorting": {
+        "category": "elements",
+        "group": "base",
+        "order": 1
+      },
+      "links": {
+        "entityType": "element",
+        "encyclopediaEntryId": "hydrogen",
+        "requiredTechnologyIds": []
+      }
+    },
+    {
+      "id": "card_water",
+      "type": "card",
+      "cardType": "compound",
+      "entityId": "water",
+      "name": "Water",
+      "shortLabel": "H2O",
+      "description": "Basic compound used in planetary development.",
+      "appearance": {
+        "theme": "compound",
+        "color": "#4FC3F7",
+        "icon": "droplet",
+        "image": null,
+        "rarity": "common"
+      },
+      "layout": {
+        "size": "medium",
+        "showSymbol": true,
+        "showName": true,
+        "showDescription": false,
+        "animationPreset": "fade"
+      },
+      "interaction": {
+        "draggable": true,
+        "selectable": true,
+        "stackable": true,
+        "usableInLab": true
+      },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true,
+        "showInRewards": true
+      },
+      "sorting": {
+        "category": "compounds",
+        "group": "basic",
+        "order": 10
+      },
+      "links": {
+        "entityType": "compound",
+        "encyclopediaEntryId": "water",
+        "requiredTechnologyIds": []
+      }
+    }
+  ]
+}

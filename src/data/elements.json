@@ -1,0 +1,50 @@
+{
+  "schema": "1.0",
+  "entity": "element",
+  "items": [
+    {
+      "id": "hydrogen",
+      "type": "element",
+      "symbol": "H",
+      "name": "Hydrogen",
+      "category": "nonmetal",
+      "atomicNumber": 1,
+      "card": {
+        "color": "#A8D8FF",
+        "icon": "H",
+        "rarity": "common"
+      },
+      "gameplay": {
+        "unlockedByDefault": true,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 0
+      },
+      "links": {
+        "reactions": ["water_synthesis", "hydrogen_combustion"],
+        "technologies": ["basic_elements"]
+      }
+    },
+    {
+      "id": "oxygen",
+      "type": "element",
+      "symbol": "O",
+      "name": "Oxygen",
+      "category": "nonmetal",
+      "atomicNumber": 8,
+      "card": {
+        "color": "#9BE7FF",
+        "icon": "O",
+        "rarity": "common"
+      },
+      "gameplay": {
+        "unlockedByDefault": true,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 0
+      },
+      "links": {
+        "reactions": ["water_synthesis", "oxygen_combustion"],
+        "technologies": ["basic_elements", "atmosphere_chemistry"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "1.0",
+  "entity": "worldStage",
+  "items": [
+    {
+      "id": "primitive_ocean_world",
+      "type": "worldStage",
+      "name": "Primitive Ocean World",
+      "order": 2,
+      "category": "planet",
+      "description": "A young planet with stable water, atmosphere and primitive chemical cycles.",
+      "entryRequirements": {
+        "requiredTechnologies": ["water_technology", "atmosphere_stabilization"],
+        "requiredCards": ["water", "carbon_dioxide"],
+        "requiredWorldFlags": ["has_liquid_water"],
+        "minimumParameters": {
+          "temperature": -10,
+          "pressure": 0.8,
+          "waterLevel": 40
+        }
+      },
+      "worldState": {
+        "environment": {
+          "atmosphere": "dense",
+          "temperatureRange": { "min": -20, "max": 60 },
+          "waterState": "liquid",
+          "surfaceType": "rock_ocean"
+        },
+        "visuals": {
+          "sky": "cloudy_blue",
+          "surface": "oceanic",
+          "effects": ["clouds", "fog"]
+        },
+        "simulationFlags": [
+          "enable_water_cycle",
+          "enable_basic_climate"
+        ]
+      },
+      "rewards": {
+        "unlockedTechnologies": ["organic_chemistry"],
+        "unlockedTests": ["test_water_cycle"],
+        "unlockedEntries": ["water_cycle"],
+        "grantedWorldFlags": ["stable_hydrosphere"]
+      },
+      "links": {
+        "previousStageId": "hot_barren_planet",
+        "nextStageIds": ["prebiotic_world"]
+      }
+    }
+  ]
+}

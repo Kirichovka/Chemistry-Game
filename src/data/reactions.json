@@ -1,0 +1,37 @@
+{
+  "schema": "1.0",
+  "entity": "reaction",
+  "items": [
+    {
+      "id": "water_synthesis",
+      "type": "reaction",
+      "name": "Water synthesis",
+      "inputs": [
+        { "id": "hydrogen", "count": 2 },
+        { "id": "oxygen", "count": 1 }
+      ],
+      "outputs": [
+        { "id": "water", "count": 2 }
+      ],
+      "conditions": {
+        "temperatureC": 300,
+        "pressure": null,
+        "catalyst": null,
+        "technologyRequired": "basic_chemistry"
+      },
+      "energy": {
+        "type": "exothermic",
+        "value": -572
+      },
+      "gameplay": {
+        "discoverable": true,
+        "repeatable": true,
+        "discoveryPoints": 10
+      },
+      "links": {
+        "technologies": ["basic_chemistry"],
+        "encyclopediaEntryId": "water_synthesis"
+      }
+    }
+  ]
+}

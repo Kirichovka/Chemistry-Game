@@ -1,0 +1,59 @@
+{
+  "schema": "1.0",
+  "entity": "category",
+  "items": [
+    {
+      "id": "chemistry",
+      "type": "category",
+      "name": "Chemistry",
+      "description": "Basic chemical science.",
+      "scope": [
+        "elements",
+        "compounds",
+        "reactions",
+        "tests",
+        "encyclopedia"
+      ],
+      "ui": {
+        "icon": "atom",
+        "color": "#42A5F5",
+        "order": 1
+      },
+      "parent": null
+    },
+    {
+      "id": "planet",
+      "type": "category",
+      "name": "Planetary Development",
+      "description": "Processes shaping planetary environments.",
+      "scope": [
+        "technologies",
+        "worldStages",
+        "processes"
+      ],
+      "ui": {
+        "icon": "planet",
+        "color": "#FFA726",
+        "order": 2
+      },
+      "parent": null
+    },
+    {
+      "id": "life",
+      "type": "category",
+      "name": "Life",
+      "description": "Biological systems and evolution.",
+      "scope": [
+        "technologies",
+        "processes",
+        "encyclopedia"
+      ],
+      "ui": {
+        "icon": "leaf",
+        "color": "#66BB6A",
+        "order": 3
+      },
+      "parent": null
+    }
+  ]
+}

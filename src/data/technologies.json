@@ -1,0 +1,33 @@
+{
+  "schema": "1.0",
+  "entity": "technology",
+  "items": [
+    {
+      "id": "water_technology",
+      "type": "technology",
+      "name": "Water technology",
+      "category": "planet",
+      "description": "Unlocks water-based planetary development.",
+      "requirements": {
+        "technologies": ["basic_chemistry"],
+        "cards": ["water"],
+        "knowledgePoints": 50
+      },
+      "unlockedBy": {
+        "reactions": ["water_synthesis"],
+        "tests": []
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "unlockedTechnologies": ["ocean_formation"],
+        "worldEffects": ["enable_water_system"],
+        "encyclopediaEntries": ["water"]
+      },
+      "ui": {
+        "tier": 1,
+        "branch": "planet",
+        "position": { "x": 100, "y": 200 }
+      }
+    }
+  ]
+}

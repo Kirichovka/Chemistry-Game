@@ -1,0 +1,35 @@
+{
+  "schema": "1.0",
+  "entity": "test",
+  "items": [
+    {
+      "id": "test_water_basic",
+      "type": "test",
+      "title": "Create water",
+      "category": "basic_chemistry",
+      "difficulty": "beginner",
+      "description": "Synthesize water from basic elements.",
+      "taskType": "synthesis",
+      "goal": {
+        "targetCardId": "water",
+        "amount": 1
+      },
+      "availableCards": ["hydrogen", "oxygen"],
+      "allowedConditions": [],
+      "constraints": {
+        "maxAttempts": 3,
+        "timeLimitSeconds": null,
+        "reactionLimit": 1
+      },
+      "rewards": {
+        "knowledgePoints": 10,
+        "unlockedCards": [],
+        "unlockedTechnologies": []
+      },
+      "links": {
+        "relatedReactions": ["water_synthesis"],
+        "encyclopediaEntries": ["water"]
+      }
+    }
+  ]
+}
