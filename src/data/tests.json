@@ -5,30 +5,120 @@
     {
       "id": "test_water_basic",
       "type": "test",
-      "title": "Create water",
-      "category": "basic_chemistry",
+      "title": "Build Water",
+      "category": "chemistry",
       "difficulty": "beginner",
-      "description": "Synthesize water from basic elements.",
+      "description": "Combine the right atoms and condition to synthesize water.",
       "taskType": "synthesis",
       "goal": {
+        "reactionId": "water_synthesis",
         "targetCardId": "water",
-        "amount": 1
+        "requiredConditionIds": ["electric_spark"]
       },
       "availableCards": ["hydrogen", "oxygen"],
-      "allowedConditions": [],
-      "constraints": {
-        "maxAttempts": 3,
-        "timeLimitSeconds": null,
-        "reactionLimit": 1
+      "availableProcesses": [],
+      "allowedConditions": ["electric_spark"],
+      "requirements": {
+        "technologies": [],
+        "worldStageId": null
+      },
+      "gameplay": {
+        "unlockedByDefault": true,
+        "maxAttempts": 3
       },
       "rewards": {
         "knowledgePoints": 10,
         "unlockedCards": [],
         "unlockedTechnologies": []
+      }
+    },
+    {
+      "id": "test_world_chain",
+      "type": "test",
+      "title": "Atmosphere Chain",
+      "category": "planet",
+      "difficulty": "intermediate",
+      "description": "Choose the reaction that best supports atmospheric development.",
+      "taskType": "reaction_chain",
+      "goal": {
+        "reactionIds": ["water_synthesis", "carbon_dioxide_synthesis"]
       },
-      "links": {
-        "relatedReactions": ["water_synthesis"],
-        "encyclopediaEntries": ["water"]
+      "availableCards": ["hydrogen", "oxygen", "carbon"],
+      "availableProcesses": [],
+      "allowedConditions": ["electric_spark", "high_temperature"],
+      "requirements": {
+        "technologies": ["atmosphere_engineering"],
+        "worldStageId": "atmosphere_world"
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "maxAttempts": 3
+      },
+      "rewards": {
+        "knowledgePoints": 16,
+        "unlockedCards": [],
+        "unlockedTechnologies": []
+      }
+    },
+    {
+      "id": "test_pressure_mastery",
+      "type": "test",
+      "title": "Pressure Mastery",
+      "category": "chemistry",
+      "difficulty": "intermediate",
+      "description": "Select the correct condition to synthesize ammonia from gases.",
+      "taskType": "condition_task",
+      "goal": {
+        "reactionId": "ammonia_synthesis",
+        "targetCardId": "ammonia",
+        "requiredConditionIds": ["high_pressure"]
+      },
+      "availableCards": ["nitrogen", "hydrogen"],
+      "availableProcesses": [],
+      "allowedConditions": ["electric_spark", "high_temperature", "high_pressure"],
+      "requirements": {
+        "technologies": ["ocean_formation"],
+        "worldStageId": "water_world"
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "maxAttempts": 3
+      },
+      "rewards": {
+        "knowledgePoints": 18,
+        "unlockedCards": [],
+        "unlockedTechnologies": []
+      }
+    },
+    {
+      "id": "test_prebiotic_chain",
+      "type": "test",
+      "title": "Spark of Life",
+      "category": "life",
+      "difficulty": "advanced",
+      "description": "Assemble the full chain of cards needed for prebiotic synthesis.",
+      "taskType": "correct_reaction_selection",
+      "goal": {
+        "reactionId": "prebiotic_synthesis",
+        "targetCardId": "organic_precursors",
+        "requiredConditionIds": ["electric_spark"],
+        "requiredProcessIds": ["prebiotic_cycle"]
+      },
+      "availableCards": ["water", "carbon_dioxide", "ammonia", "prebiotic_cycle"],
+      "availableProcesses": ["prebiotic_cycle"],
+      "allowedConditions": ["electric_spark", "sunlight"],
+      "requirements": {
+        "technologies": ["prebiotic_chemistry"],
+        "worldStageId": "water_world"
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "maxAttempts": 3
+      },
+      "rewards": {
+        "knowledgePoints": 22,
+        "unlockedCards": [],
+        "unlockedTechnologies": []
       }
     }
   ]

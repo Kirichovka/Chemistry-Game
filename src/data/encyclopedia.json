@@ -3,34 +3,300 @@
   "entity": "encyclopediaEntry",
   "items": [
     {
+      "id": "hydrogen",
+      "type": "encyclopediaEntry",
+      "title": "Hydrogen",
+      "entryCategory": "element",
+      "summary": "Hydrogen is the lightest element and a crucial ingredient in water and ammonia.",
+      "properties": {
+        "symbol": "H",
+        "atomicNumber": 1
+      },
+      "education": {
+        "reactions": ["water_synthesis", "ammonia_synthesis"],
+        "uses": ["water", "fuel", "atmospheric chemistry"]
+      },
+      "unlock": {
+        "cards": ["hydrogen"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
+      "id": "oxygen",
+      "type": "encyclopediaEntry",
+      "title": "Oxygen",
+      "entryCategory": "element",
+      "summary": "Oxygen readily reacts with many elements and supports water formation and biospheres.",
+      "properties": {
+        "symbol": "O",
+        "atomicNumber": 8
+      },
+      "education": {
+        "reactions": ["water_synthesis", "carbon_dioxide_synthesis", "oxygen_release"],
+        "uses": ["atmosphere", "water", "respiration"]
+      },
+      "unlock": {
+        "cards": ["oxygen"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
+      "id": "carbon",
+      "type": "encyclopediaEntry",
+      "title": "Carbon",
+      "entryCategory": "element",
+      "summary": "Carbon forms strong, diverse bonds and is central to planetary and organic chemistry.",
+      "properties": {
+        "symbol": "C",
+        "atomicNumber": 6
+      },
+      "education": {
+        "reactions": ["carbon_dioxide_synthesis"],
+        "uses": ["greenhouse gases", "organic molecules"]
+      },
+      "unlock": {
+        "cards": ["carbon"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
+      "id": "nitrogen",
+      "type": "encyclopediaEntry",
+      "title": "Nitrogen",
+      "entryCategory": "element",
+      "summary": "Nitrogen is abundant in atmospheres and becomes chemically useful under pressure.",
+      "properties": {
+        "symbol": "N",
+        "atomicNumber": 7
+      },
+      "education": {
+        "reactions": ["ammonia_synthesis"],
+        "uses": ["fertility", "atmosphere", "proteins"]
+      },
+      "unlock": {
+        "cards": ["nitrogen"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
+      "id": "iron",
+      "type": "encyclopediaEntry",
+      "title": "Iron",
+      "entryCategory": "element",
+      "summary": "Iron supports strong tools, machinery and the leap to civilization.",
+      "properties": {
+        "symbol": "Fe",
+        "atomicNumber": 26
+      },
+      "education": {
+        "reactions": [],
+        "uses": ["tools", "infrastructure", "industry"]
+      },
+      "unlock": {
+        "cards": ["iron"],
+        "technologies": ["metallurgy"],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
       "id": "water",
       "type": "encyclopediaEntry",
       "title": "Water",
-      "linkedCardId": "water",
       "entryCategory": "compound",
-      "isHiddenUntilDiscovered": true,
-      "summary": "Water is a compound made of hydrogen and oxygen.",
+      "summary": "Water links atmosphere, oceans, climate regulation and every known form of life.",
       "properties": {
         "formula": "H2O",
-        "state": "liquid",
-        "category": "oxide",
-        "molecularMass": 18.015,
-        "meltingPointC": 0,
-        "boilingPointC": 100,
-        "structure": "bent"
+        "state": "liquid"
       },
       "education": {
-        "reactions": ["water_synthesis", "electrolysis_water"],
-        "uses": ["life", "oceans", "climate"],
-        "technologies": ["water_technology", "ocean_formation"]
+        "reactions": ["water_synthesis"],
+        "uses": ["oceans", "climate", "life"]
       },
-      "media": {
-        "structure2D": "structures/water-2d.svg",
-        "structure3D": null
+      "unlock": {
+        "cards": ["water"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": ["water_synthesis"]
+      }
+    },
+    {
+      "id": "carbon_dioxide",
+      "type": "encyclopediaEntry",
+      "title": "Carbon Dioxide",
+      "entryCategory": "compound",
+      "summary": "Carbon dioxide helps trap heat and can be transformed by photosynthetic processes.",
+      "properties": {
+        "formula": "CO2",
+        "state": "gas"
       },
-      "links": {
-        "relatedEntries": ["hydrogen", "oxygen"],
-        "labAvailable": true
+      "education": {
+        "reactions": ["carbon_dioxide_synthesis", "oxygen_release"],
+        "uses": ["atmosphere", "photosynthesis"]
+      },
+      "unlock": {
+        "cards": ["carbon_dioxide"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": ["carbon_dioxide_synthesis"]
+      }
+    },
+    {
+      "id": "ammonia",
+      "type": "encyclopediaEntry",
+      "title": "Ammonia",
+      "entryCategory": "compound",
+      "summary": "Ammonia introduces reactive nitrogen into the planet's chemical toolkit.",
+      "properties": {
+        "formula": "NH3",
+        "state": "gas"
+      },
+      "education": {
+        "reactions": ["ammonia_synthesis"],
+        "uses": ["fertility", "prebiotic chemistry"]
+      },
+      "unlock": {
+        "cards": ["ammonia"],
+        "technologies": [],
+        "worldStages": [],
+        "reactions": ["ammonia_synthesis"]
+      }
+    },
+    {
+      "id": "organic_precursors",
+      "type": "encyclopediaEntry",
+      "title": "Organic Precursors",
+      "entryCategory": "compound",
+      "summary": "Prebiotic chemistry creates the carbon-rich molecules that can tip into life.",
+      "properties": {
+        "formula": "CHON",
+        "state": "mixed"
+      },
+      "education": {
+        "reactions": ["prebiotic_synthesis"],
+        "uses": ["life", "complex molecules"]
+      },
+      "unlock": {
+        "cards": ["organic_precursors"],
+        "technologies": ["prebiotic_chemistry"],
+        "worldStages": [],
+        "reactions": ["prebiotic_synthesis"]
+      }
+    },
+    {
+      "id": "atmosphere",
+      "type": "encyclopediaEntry",
+      "title": "Atmosphere",
+      "entryCategory": "world",
+      "summary": "An atmosphere protects the surface, moderates heat and opens the door to liquid water.",
+      "properties": {},
+      "education": {
+        "reactions": ["carbon_dioxide_synthesis"],
+        "uses": ["climate", "pressure", "surface stability"]
+      },
+      "unlock": {
+        "cards": [],
+        "technologies": ["atmosphere_engineering"],
+        "worldStages": ["atmosphere_world"],
+        "reactions": []
+      }
+    },
+    {
+      "id": "water_world",
+      "type": "encyclopediaEntry",
+      "title": "Water World",
+      "entryCategory": "world",
+      "summary": "Stable oceans create the chemistry playground that life requires.",
+      "properties": {},
+      "education": {
+        "reactions": ["water_synthesis"],
+        "uses": ["hydrological cycle", "climate", "life"]
+      },
+      "unlock": {
+        "cards": [],
+        "technologies": ["ocean_formation"],
+        "worldStages": ["water_world"],
+        "reactions": []
+      }
+    },
+    {
+      "id": "prebiotic_chemistry",
+      "type": "encyclopediaEntry",
+      "title": "Prebiotic Chemistry",
+      "entryCategory": "process",
+      "summary": "Before life exists, repeated cycles can still accumulate complex organics from simple compounds.",
+      "properties": {},
+      "education": {
+        "reactions": ["prebiotic_synthesis"],
+        "uses": ["life emergence", "organic synthesis"]
+      },
+      "unlock": {
+        "cards": ["prebiotic_cycle"],
+        "technologies": ["prebiotic_chemistry"],
+        "worldStages": [],
+        "reactions": []
+      }
+    },
+    {
+      "id": "photosynthesis",
+      "type": "encyclopediaEntry",
+      "title": "Photosynthesis",
+      "entryCategory": "process",
+      "summary": "Photosynthesis captures light to drive oxygen-rich biological chemistry.",
+      "properties": {},
+      "education": {
+        "reactions": ["oxygen_release"],
+        "uses": ["oxygen", "biospheres", "food webs"]
+      },
+      "unlock": {
+        "cards": ["photosynthesis"],
+        "technologies": ["photosynthesis"],
+        "worldStages": [],
+        "reactions": ["oxygen_release"]
+      }
+    },
+    {
+      "id": "life_world",
+      "type": "encyclopediaEntry",
+      "title": "Life",
+      "entryCategory": "world",
+      "summary": "Complex chemistry becomes self-maintaining biology and reshapes the entire planet.",
+      "properties": {},
+      "education": {
+        "reactions": ["prebiotic_synthesis", "oxygen_release"],
+        "uses": ["biospheres", "evolution"]
+      },
+      "unlock": {
+        "cards": [],
+        "technologies": ["microbial_life"],
+        "worldStages": ["life_world"],
+        "reactions": []
+      }
+    },
+    {
+      "id": "civilization_world",
+      "type": "encyclopediaEntry",
+      "title": "Civilization",
+      "entryCategory": "world",
+      "summary": "Civilization emerges when knowledge, materials and stable ecosystems converge.",
+      "properties": {},
+      "education": {
+        "reactions": [],
+        "uses": ["infrastructure", "technology", "planetary stewardship"]
+      },
+      "unlock": {
+        "cards": [],
+        "technologies": ["civil_engineering"],
+        "worldStages": ["civilization_world"],
+        "reactions": []
       }
     }
   ]

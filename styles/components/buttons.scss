@@ -1,0 +1,42 @@
+.button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    opacity var(--transition);
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button--primary {
+  color: #04101f;
+  background: linear-gradient(135deg, var(--chemistry-accent), #9be8ff);
+  box-shadow: 0 12px 30px rgba(54, 194, 255, 0.25);
+}
+
+.button--ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.button--danger {
+  color: white;
+  background: linear-gradient(135deg, var(--danger), #ffad77);
+  box-shadow: 0 12px 30px rgba(255, 122, 114, 0.2);
+}
+
+.button-row {
+  grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+  align-items: center;
+}

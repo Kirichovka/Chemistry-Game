@@ -3,32 +3,51 @@
   "entity": "condition",
   "items": [
     {
+      "id": "electric_spark",
+      "type": "condition",
+      "name": "Electric spark",
+      "category": "energy",
+      "description": "A burst of energy that can initiate fast reactions or prebiotic synthesis.",
+      "parameter": {
+        "key": "energyPulse",
+        "valueType": "boolean",
+        "unit": null,
+        "default": true
+      },
+      "gameplay": {
+        "unlockedByDefault": true,
+        "usableInLab": true,
+        "visibleInTests": true
+      },
+      "ui": {
+        "icon": "spark",
+        "color": "#ffd86b",
+        "order": 1
+      }
+    },
+    {
       "id": "high_temperature",
       "type": "condition",
       "name": "High temperature",
       "category": "temperature",
-      "description": "Requires elevated temperature for the reaction to proceed.",
+      "description": "Adds enough heat to drive oxidation and atmospheric chemistry.",
       "parameter": {
         "key": "temperatureC",
         "valueType": "number",
         "unit": "C",
         "min": 100,
         "max": 2000,
-        "default": 300
+        "default": 400
       },
       "gameplay": {
-        "availableByDefault": true,
+        "unlockedByDefault": true,
         "usableInLab": true,
         "visibleInTests": true
       },
       "ui": {
         "icon": "thermometer",
-        "color": "#FF7043",
-        "order": 1
-      },
-      "links": {
-        "relatedReactions": ["water_synthesis"],
-        "requiredTechnologies": []
+        "color": "#ff7a59",
+        "order": 2
       }
     },
     {
@@ -36,28 +55,49 @@
       "type": "condition",
       "name": "High pressure",
       "category": "pressure",
-      "description": "Applies increased pressure to the reaction system.",
+      "description": "Compresses gases so difficult syntheses can proceed.",
       "parameter": {
         "key": "pressureAtm",
         "valueType": "number",
         "unit": "atm",
         "min": 2,
         "max": 500,
-        "default": 10
+        "default": 80
       },
       "gameplay": {
-        "availableByDefault": true,
+        "unlockedByDefault": true,
         "usableInLab": true,
         "visibleInTests": true
       },
       "ui": {
         "icon": "gauge",
-        "color": "#42A5F5",
-        "order": 2
+        "color": "#58b8ff",
+        "order": 3
+      }
+    },
+    {
+      "id": "sunlight",
+      "type": "condition",
+      "name": "Sunlight",
+      "category": "radiation",
+      "description": "Provides steady energy for photosynthetic chemistry.",
+      "parameter": {
+        "key": "lightLevel",
+        "valueType": "number",
+        "unit": "lux",
+        "min": 1,
+        "max": 100000,
+        "default": 10000
       },
-      "links": {
-        "relatedReactions": [],
-        "requiredTechnologies": []
+      "gameplay": {
+        "unlockedByDefault": true,
+        "usableInLab": true,
+        "visibleInTests": true
+      },
+      "ui": {
+        "icon": "sun",
+        "color": "#ffc247",
+        "order": 4
       }
     }
   ]

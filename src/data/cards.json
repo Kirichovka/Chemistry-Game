@@ -9,43 +9,113 @@
       "entityId": "hydrogen",
       "name": "Hydrogen",
       "shortLabel": "H",
-      "description": "Basic chemical element.",
+      "description": "Light fuel for early synthesis.",
       "appearance": {
         "theme": "element",
-        "color": "#A8D8FF",
-        "icon": "atom",
-        "image": null,
+        "color": "#9fe4ff",
+        "icon": "H",
         "rarity": "common"
       },
-      "layout": {
-        "size": "medium",
-        "showSymbol": true,
-        "showName": true,
-        "showDescription": false,
-        "animationPreset": "fade"
-      },
-      "interaction": {
-        "draggable": true,
-        "selectable": true,
-        "stackable": true,
-        "usableInLab": true
-      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
       "visibility": {
         "hiddenUntilUnlocked": false,
         "showInLibrary": true,
-        "showInLabPanel": true,
-        "showInRewards": true
+        "showInLabPanel": true
       },
-      "sorting": {
-        "category": "elements",
-        "group": "base",
-        "order": 1
+      "sorting": { "category": "elements", "order": 1 },
+      "links": { "entityType": "element", "encyclopediaEntryId": "hydrogen" }
+    },
+    {
+      "id": "card_oxygen",
+      "type": "card",
+      "cardType": "element",
+      "entityId": "oxygen",
+      "name": "Oxygen",
+      "shortLabel": "O",
+      "description": "Reactive gas for water and atmospheres.",
+      "appearance": {
+        "theme": "element",
+        "color": "#6dd2ff",
+        "icon": "O",
+        "rarity": "common"
       },
-      "links": {
-        "entityType": "element",
-        "encyclopediaEntryId": "hydrogen",
-        "requiredTechnologyIds": []
-      }
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "elements", "order": 2 },
+      "links": { "entityType": "element", "encyclopediaEntryId": "oxygen" }
+    },
+    {
+      "id": "card_carbon",
+      "type": "card",
+      "cardType": "element",
+      "entityId": "carbon",
+      "name": "Carbon",
+      "shortLabel": "C",
+      "description": "Backbone of atmospheres and life.",
+      "appearance": {
+        "theme": "element",
+        "color": "#d7c79a",
+        "icon": "C",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "elements", "order": 3 },
+      "links": { "entityType": "element", "encyclopediaEntryId": "carbon" }
+    },
+    {
+      "id": "card_nitrogen",
+      "type": "card",
+      "cardType": "element",
+      "entityId": "nitrogen",
+      "name": "Nitrogen",
+      "shortLabel": "N",
+      "description": "Stable gas for pressured synthesis.",
+      "appearance": {
+        "theme": "element",
+        "color": "#a8b5ff",
+        "icon": "N",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "elements", "order": 4 },
+      "links": { "entityType": "element", "encyclopediaEntryId": "nitrogen" }
+    },
+    {
+      "id": "card_iron",
+      "type": "card",
+      "cardType": "element",
+      "entityId": "iron",
+      "name": "Iron",
+      "shortLabel": "Fe",
+      "description": "Metal foundation of civilization.",
+      "appearance": {
+        "theme": "element",
+        "color": "#c47f52",
+        "icon": "Fe",
+        "rarity": "rare"
+      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "elements", "order": 5 },
+      "links": { "entityType": "element", "encyclopediaEntryId": "iron" }
     },
     {
       "id": "card_water",
@@ -54,43 +124,251 @@
       "entityId": "water",
       "name": "Water",
       "shortLabel": "H2O",
-      "description": "Basic compound used in planetary development.",
+      "description": "Liquid world-builder.",
       "appearance": {
         "theme": "compound",
-        "color": "#4FC3F7",
-        "icon": "droplet",
-        "image": null,
+        "color": "#37c5ff",
+        "icon": "H2O",
         "rarity": "common"
       },
-      "layout": {
-        "size": "medium",
-        "showSymbol": true,
-        "showName": true,
-        "showDescription": false,
-        "animationPreset": "fade"
-      },
-      "interaction": {
-        "draggable": true,
-        "selectable": true,
-        "stackable": true,
-        "usableInLab": true
-      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
       "visibility": {
         "hiddenUntilUnlocked": true,
         "showInLibrary": true,
-        "showInLabPanel": true,
-        "showInRewards": true
+        "showInLabPanel": true
       },
-      "sorting": {
-        "category": "compounds",
-        "group": "basic",
-        "order": 10
+      "sorting": { "category": "compounds", "order": 10 },
+      "links": { "entityType": "compound", "encyclopediaEntryId": "water" }
+    },
+    {
+      "id": "card_carbon_dioxide",
+      "type": "card",
+      "cardType": "compound",
+      "entityId": "carbon_dioxide",
+      "name": "Carbon Dioxide",
+      "shortLabel": "CO2",
+      "description": "Atmospheric stabilizer.",
+      "appearance": {
+        "theme": "compound",
+        "color": "#848fa8",
+        "icon": "CO2",
+        "rarity": "common"
       },
-      "links": {
-        "entityType": "compound",
-        "encyclopediaEntryId": "water",
-        "requiredTechnologyIds": []
-      }
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "compounds", "order": 11 },
+      "links": { "entityType": "compound", "encyclopediaEntryId": "carbon_dioxide" }
+    },
+    {
+      "id": "card_ammonia",
+      "type": "card",
+      "cardType": "compound",
+      "entityId": "ammonia",
+      "name": "Ammonia",
+      "shortLabel": "NH3",
+      "description": "Nitrogen-rich precursor.",
+      "appearance": {
+        "theme": "compound",
+        "color": "#89d6c0",
+        "icon": "NH3",
+        "rarity": "uncommon"
+      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "compounds", "order": 12 },
+      "links": { "entityType": "compound", "encyclopediaEntryId": "ammonia" }
+    },
+    {
+      "id": "card_organic_precursors",
+      "type": "card",
+      "cardType": "compound",
+      "entityId": "organic_precursors",
+      "name": "Organic Precursors",
+      "shortLabel": "CHON",
+      "description": "A stepping stone to life.",
+      "appearance": {
+        "theme": "compound",
+        "color": "#6cd186",
+        "icon": "CHON",
+        "rarity": "rare"
+      },
+      "interaction": { "selectable": true, "stackable": true, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "compounds", "order": 13 },
+      "links": { "entityType": "compound", "encyclopediaEntryId": "organic_precursors" }
+    },
+    {
+      "id": "card_prebiotic_cycle",
+      "type": "card",
+      "cardType": "process",
+      "entityId": "prebiotic_cycle",
+      "name": "Prebiotic Cycle",
+      "shortLabel": "Cycle",
+      "description": "Wet-dry chemistry loop.",
+      "appearance": {
+        "theme": "process",
+        "color": "#7fdc8c",
+        "icon": "Cycle",
+        "rarity": "uncommon"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "processes", "order": 20 },
+      "links": { "entityType": "process", "encyclopediaEntryId": "prebiotic_chemistry" }
+    },
+    {
+      "id": "card_photosynthesis",
+      "type": "card",
+      "cardType": "process",
+      "entityId": "photosynthesis",
+      "name": "Photosynthesis",
+      "shortLabel": "Photo",
+      "description": "Light-powered oxygen cycle.",
+      "appearance": {
+        "theme": "process",
+        "color": "#72d384",
+        "icon": "Leaf",
+        "rarity": "rare"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "processes", "order": 21 },
+      "links": { "entityType": "process", "encyclopediaEntryId": "photosynthesis" }
+    },
+    {
+      "id": "card_smelting",
+      "type": "card",
+      "cardType": "process",
+      "entityId": "smelting",
+      "name": "Smelting",
+      "shortLabel": "Forge",
+      "description": "Metalworking for tools.",
+      "appearance": {
+        "theme": "process",
+        "color": "#f39b62",
+        "icon": "Forge",
+        "rarity": "rare"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": true,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "processes", "order": 22 },
+      "links": { "entityType": "process", "encyclopediaEntryId": "iron" }
+    },
+    {
+      "id": "card_electric_spark",
+      "type": "card",
+      "cardType": "condition",
+      "entityId": "electric_spark",
+      "name": "Electric Spark",
+      "shortLabel": "Spark",
+      "description": "Adds ignition energy.",
+      "appearance": {
+        "theme": "condition",
+        "color": "#ffd86b",
+        "icon": "Spark",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "conditions", "order": 30 },
+      "links": { "entityType": "condition", "encyclopediaEntryId": null }
+    },
+    {
+      "id": "card_high_temperature",
+      "type": "card",
+      "cardType": "condition",
+      "entityId": "high_temperature",
+      "name": "High Temperature",
+      "shortLabel": "Heat",
+      "description": "Pushes oxidation reactions forward.",
+      "appearance": {
+        "theme": "condition",
+        "color": "#ff7a59",
+        "icon": "Heat",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "conditions", "order": 31 },
+      "links": { "entityType": "condition", "encyclopediaEntryId": null }
+    },
+    {
+      "id": "card_high_pressure",
+      "type": "card",
+      "cardType": "condition",
+      "entityId": "high_pressure",
+      "name": "High Pressure",
+      "shortLabel": "Press",
+      "description": "Compresses gases for synthesis.",
+      "appearance": {
+        "theme": "condition",
+        "color": "#58b8ff",
+        "icon": "Press",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "conditions", "order": 32 },
+      "links": { "entityType": "condition", "encyclopediaEntryId": null }
+    },
+    {
+      "id": "card_sunlight",
+      "type": "card",
+      "cardType": "condition",
+      "entityId": "sunlight",
+      "name": "Sunlight",
+      "shortLabel": "Sun",
+      "description": "Steady energy for photosynthesis.",
+      "appearance": {
+        "theme": "condition",
+        "color": "#ffc247",
+        "icon": "Sun",
+        "rarity": "common"
+      },
+      "interaction": { "selectable": true, "stackable": false, "usableInLab": true },
+      "visibility": {
+        "hiddenUntilUnlocked": false,
+        "showInLibrary": true,
+        "showInLabPanel": true
+      },
+      "sorting": { "category": "conditions", "order": 33 },
+      "links": { "entityType": "condition", "encyclopediaEntryId": null }
     }
   ]
 }

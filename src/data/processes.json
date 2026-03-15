@@ -3,40 +3,71 @@
   "entity": "process",
   "items": [
     {
+      "id": "condensation",
+      "type": "process",
+      "name": "Condensation",
+      "description": "Cooling vapor forms stable liquid water.",
+      "category": "planet",
+      "effects": ["condense_oceans"],
+      "gameplay": {
+        "unlockedByDefault": true,
+        "usableInLab": false,
+        "discoveryPoints": 2
+      },
+      "visuals": {
+        "icon": "cloud-rain",
+        "color": "#5ac7ff"
+      }
+    },
+    {
+      "id": "prebiotic_cycle",
+      "type": "process",
+      "name": "Prebiotic Cycle",
+      "description": "Repeated wet-dry cycles and energy pulses build complex organic molecules.",
+      "category": "life",
+      "effects": ["seed_prebiotic_chemistry"],
+      "gameplay": {
+        "unlockedByDefault": false,
+        "usableInLab": true,
+        "discoveryPoints": 8
+      },
+      "visuals": {
+        "icon": "spiral",
+        "color": "#7fdc8c"
+      }
+    },
+    {
       "id": "photosynthesis",
       "type": "process",
       "name": "Photosynthesis",
-      "description": "Plants convert carbon dioxide and sunlight into oxygen.",
-      "category": "biological",
-      "inputs": {
-        "resources": {
-          "carbonDioxide": 2,
-          "water": 1,
-          "energy": 3
-        }
-      },
-      "outputs": {
-        "resources": {
-          "oxygen": 2
-        }
-      },
-      "effects": [
-        "increase_oxygen",
-        "increase_biodiversity"
-      ],
-      "rules": {
-        "repeatable": true,
-        "interval": 30,
-        "requiresActivation": false
-      },
-      "requirements": {
-        "technologies": ["photosynthesis"],
-        "worldFlags": ["hasPlants"],
-        "biomes": ["forest"]
+      "description": "Captured light energy transforms water and carbon dioxide into oxygen-rich biosphere chemistry.",
+      "category": "life",
+      "effects": ["oxygenate_biosphere"],
+      "gameplay": {
+        "unlockedByDefault": false,
+        "usableInLab": true,
+        "discoveryPoints": 12
       },
       "visuals": {
         "icon": "leaf",
-        "color": "#4CAF50"
+        "color": "#72d384"
+      }
+    },
+    {
+      "id": "smelting",
+      "type": "process",
+      "name": "Smelting",
+      "description": "High-temperature metalwork enables stronger tools and infrastructure.",
+      "category": "civilization",
+      "effects": ["establish_civilization"],
+      "gameplay": {
+        "unlockedByDefault": false,
+        "usableInLab": true,
+        "discoveryPoints": 12
+      },
+      "visuals": {
+        "icon": "forge",
+        "color": "#f39b62"
       }
     }
   ]

@@ -1,0 +1,8 @@
+.page--world .meter-list {
+  gap: var(--space-4);
+}
+
+.page--world .panel:last-child {
+  display: grid;
+  gap: var(--space-4);
+}

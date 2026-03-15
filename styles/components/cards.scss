@@ -1,0 +1,108 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-3);
+}
+
+.game-card {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  color: var(--text);
+  text-align: left;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
+    rgba(4, 10, 22, 0.55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.game-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border-top: 3px solid var(--card-accent, rgba(255, 255, 255, 0.3));
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.game-card:hover:not(:disabled) {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.game-card.is-selected {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(4, 10, 22, 0.78);
+  border-color: var(--card-accent, rgba(255, 255, 255, 0.4));
+}
+
+.game-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-card--compact {
+  min-height: 140px;
+}
+
+.game-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.game-card__label {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.game-card__badge {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--text-muted);
+}
+
+.game-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: var(--font-display);
+}
+
+.game-card__description,
+.game-card__meta {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.game-card--chemistry,
+.game-card--element,
+.game-card--compound,
+.game-card--condition {
+  --card-accent: var(--chemistry-accent);
+}
+
+.game-card--planet {
+  --card-accent: var(--planet-accent);
+}
+
+.game-card--life,
+.game-card--process {
+  --card-accent: var(--life-accent);
+}
+
+.game-card--civilization {
+  --card-accent: var(--civilization-accent);
+}

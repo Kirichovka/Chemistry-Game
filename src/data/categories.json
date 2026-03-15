@@ -6,17 +6,11 @@
       "id": "chemistry",
       "type": "category",
       "name": "Chemistry",
-      "description": "Basic chemical science.",
-      "scope": [
-        "elements",
-        "compounds",
-        "reactions",
-        "tests",
-        "encyclopedia"
-      ],
+      "description": "Foundational reactions, compounds and laboratory knowledge.",
+      "scope": ["elements", "compounds", "reactions", "tests", "encyclopedia"],
       "ui": {
         "icon": "atom",
-        "color": "#42A5F5",
+        "color": "#36c2ff",
         "order": 1
       },
       "parent": null
@@ -24,16 +18,12 @@
     {
       "id": "planet",
       "type": "category",
-      "name": "Planetary Development",
-      "description": "Processes shaping planetary environments.",
-      "scope": [
-        "technologies",
-        "worldStages",
-        "processes"
-      ],
+      "name": "Planet",
+      "description": "Atmospheric balance, oceans and planetary stability.",
+      "scope": ["technologies", "worldStages", "worldEffects", "processes"],
       "ui": {
-        "icon": "planet",
-        "color": "#FFA726",
+        "icon": "globe",
+        "color": "#ff9c54",
         "order": 2
       },
       "parent": null
@@ -42,16 +32,25 @@
       "id": "life",
       "type": "category",
       "name": "Life",
-      "description": "Biological systems and evolution.",
-      "scope": [
-        "technologies",
-        "processes",
-        "encyclopedia"
-      ],
+      "description": "Prebiotic chemistry, biospheres and biological processes.",
+      "scope": ["technologies", "processes", "tests", "encyclopedia"],
       "ui": {
         "icon": "leaf",
-        "color": "#66BB6A",
+        "color": "#72d384",
         "order": 3
+      },
+      "parent": null
+    },
+    {
+      "id": "civilization",
+      "type": "category",
+      "name": "Civilization",
+      "description": "Industry, tools and large-scale planetary stewardship.",
+      "scope": ["technologies", "worldStages", "encyclopedia"],
+      "ui": {
+        "icon": "city",
+        "color": "#f7d66d",
+        "order": 4
       },
       "parent": null
     }

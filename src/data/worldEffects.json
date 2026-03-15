@@ -1,63 +1,95 @@
 {
   "schema": "1.0",
-  "entity": "condition",
+  "entity": "worldEffect",
   "items": [
     {
-      "id": "high_temperature",
-      "type": "condition",
-      "name": "High temperature",
-      "category": "temperature",
-      "description": "Requires elevated temperature for the reaction to proceed.",
-      "parameter": {
-        "key": "temperatureC",
-        "valueType": "number",
-        "unit": "C",
-        "min": 100,
-        "max": 2000,
-        "default": 300
+      "id": "stabilize_atmosphere",
+      "type": "worldEffect",
+      "name": "Stabilize atmosphere",
+      "description": "Carbon-rich gases accumulate and form a protective atmosphere.",
+      "parameterDeltas": {
+        "atmosphere": 35,
+        "oxygen": 4,
+        "water": 0,
+        "temperature": -60,
+        "lifeComplexity": 0,
+        "civilization": 0
       },
-      "gameplay": {
-        "availableByDefault": true,
-        "usableInLab": true,
-        "visibleInTests": true
-      },
+      "grantedFlags": ["has_atmosphere"],
       "ui": {
-        "icon": "thermometer",
-        "color": "#FF7043",
-        "order": 1
-      },
-      "links": {
-        "relatedReactions": ["water_synthesis"],
-        "requiredTechnologies": []
+        "color": "#5f9dff"
       }
     },
     {
-      "id": "high_pressure",
-      "type": "condition",
-      "name": "High pressure",
-      "category": "pressure",
-      "description": "Applies increased pressure to the reaction system.",
-      "parameter": {
-        "key": "pressureAtm",
-        "valueType": "number",
-        "unit": "atm",
-        "min": 2,
-        "max": 500,
-        "default": 10
+      "id": "condense_oceans",
+      "type": "worldEffect",
+      "name": "Condense oceans",
+      "description": "Stable temperatures allow water to remain liquid and collect on the surface.",
+      "parameterDeltas": {
+        "atmosphere": 10,
+        "oxygen": 0,
+        "water": 48,
+        "temperature": -45,
+        "lifeComplexity": 0,
+        "civilization": 0
       },
-      "gameplay": {
-        "availableByDefault": true,
-        "usableInLab": true,
-        "visibleInTests": true
-      },
+      "grantedFlags": ["has_liquid_water", "has_oceans"],
       "ui": {
-        "icon": "gauge",
-        "color": "#42A5F5",
-        "order": 2
+        "color": "#3cc8ff"
+      }
+    },
+    {
+      "id": "seed_prebiotic_chemistry",
+      "type": "worldEffect",
+      "name": "Seed prebiotic chemistry",
+      "description": "Complex molecules accumulate and begin self-organizing chemistry.",
+      "parameterDeltas": {
+        "atmosphere": 0,
+        "oxygen": 0,
+        "water": 0,
+        "temperature": -10,
+        "lifeComplexity": 22,
+        "civilization": 0
       },
-      "links": {
-        "relatedReactions": [],
-        "requiredTechnologies": []
+      "grantedFlags": ["has_organic_precursors"],
+      "ui": {
+        "color": "#8bd57a"
+      }
+    },
+    {
+      "id": "oxygenate_biosphere",
+      "type": "worldEffect",
+      "name": "Oxygenate biosphere",
+      "description": "Photosynthetic life raises oxygen levels and supports more complex ecosystems.",
+      "parameterDeltas": {
+        "atmosphere": 12,
+        "oxygen": 40,
+        "water": 0,
+        "temperature": -5,
+        "lifeComplexity": 30,
+        "civilization": 0
+      },
+      "grantedFlags": ["has_oxygen_cycle", "has_plants"],
+      "ui": {
+        "color": "#7be58f"
+      }
+    },
+    {
+      "id": "establish_civilization",
+      "type": "worldEffect",
+      "name": "Establish civilization",
+      "description": "Toolmaking and large-scale coordination create the first civilization.",
+      "parameterDeltas": {
+        "atmosphere": 5,
+        "oxygen": 8,
+        "water": 0,
+        "temperature": 4,
+        "lifeComplexity": 15,
+        "civilization": 60
+      },
+      "grantedFlags": ["has_civilization"],
+      "ui": {
+        "color": "#f2d173"
       }
     }
   ]

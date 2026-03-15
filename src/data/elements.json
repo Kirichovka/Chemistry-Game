@@ -9,19 +9,17 @@
       "name": "Hydrogen",
       "category": "nonmetal",
       "atomicNumber": 1,
+      "description": "The lightest element and a key ingredient in water and ammonia.",
       "card": {
-        "color": "#A8D8FF",
+        "color": "#9fe4ff",
         "icon": "H",
         "rarity": "common"
       },
       "gameplay": {
         "unlockedByDefault": true,
         "canBeUsedInLab": true,
-        "discoveryPoints": 0
-      },
-      "links": {
-        "reactions": ["water_synthesis", "hydrogen_combustion"],
-        "technologies": ["basic_elements"]
+        "discoveryPoints": 1,
+        "startingQuantity": 18
       }
     },
     {
@@ -31,19 +29,77 @@
       "name": "Oxygen",
       "category": "nonmetal",
       "atomicNumber": 8,
+      "description": "A reactive element essential for water, atmosphere and complex life.",
       "card": {
-        "color": "#9BE7FF",
+        "color": "#6dd2ff",
         "icon": "O",
         "rarity": "common"
       },
       "gameplay": {
         "unlockedByDefault": true,
         "canBeUsedInLab": true,
-        "discoveryPoints": 0
+        "discoveryPoints": 1,
+        "startingQuantity": 14
+      }
+    },
+    {
+      "id": "carbon",
+      "type": "element",
+      "symbol": "C",
+      "name": "Carbon",
+      "category": "nonmetal",
+      "atomicNumber": 6,
+      "description": "Flexible bonding makes carbon the backbone of atmospheric and biological chemistry.",
+      "card": {
+        "color": "#d7c79a",
+        "icon": "C",
+        "rarity": "common"
       },
-      "links": {
-        "reactions": ["water_synthesis", "oxygen_combustion"],
-        "technologies": ["basic_elements", "atmosphere_chemistry"]
+      "gameplay": {
+        "unlockedByDefault": true,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 1,
+        "startingQuantity": 10
+      }
+    },
+    {
+      "id": "nitrogen",
+      "type": "element",
+      "symbol": "N",
+      "name": "Nitrogen",
+      "category": "nonmetal",
+      "atomicNumber": 7,
+      "description": "A stable atmospheric gas that becomes more useful under high pressure.",
+      "card": {
+        "color": "#a8b5ff",
+        "icon": "N",
+        "rarity": "common"
+      },
+      "gameplay": {
+        "unlockedByDefault": true,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 1,
+        "startingQuantity": 10
+      }
+    },
+    {
+      "id": "iron",
+      "type": "element",
+      "symbol": "Fe",
+      "name": "Iron",
+      "category": "metal",
+      "atomicNumber": 26,
+      "description": "A structural metal that marks the transition from life to civilization.",
+      "card": {
+        "color": "#c47f52",
+        "icon": "Fe",
+        "rarity": "rare"
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 6,
+        "startingQuantity": 3
       }
     }
   ]

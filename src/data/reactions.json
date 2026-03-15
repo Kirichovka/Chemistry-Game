@@ -5,32 +5,152 @@
     {
       "id": "water_synthesis",
       "type": "reaction",
-      "name": "Water synthesis",
+      "name": "Water Synthesis",
       "inputs": [
         { "id": "hydrogen", "count": 2 },
         { "id": "oxygen", "count": 1 }
       ],
-      "outputs": [
-        { "id": "water", "count": 2 }
-      ],
-      "conditions": {
-        "temperatureC": 300,
-        "pressure": null,
-        "catalyst": null,
-        "technologyRequired": "basic_chemistry"
+      "processIds": [],
+      "conditionIds": ["electric_spark"],
+      "outputs": [{ "id": "water", "count": 1 }],
+      "requirements": {
+        "technologies": ["basic_chemistry"],
+        "worldFlags": []
       },
       "energy": {
         "type": "exothermic",
-        "value": -572
+        "value": -286
+      },
+      "gameplay": {
+        "discoverable": true,
+        "repeatable": true,
+        "discoveryPoints": 12
+      },
+      "rewards": {
+        "knowledgePoints": 12,
+        "worldEffects": [],
+        "encyclopediaEntries": ["water"]
+      }
+    },
+    {
+      "id": "carbon_dioxide_synthesis",
+      "type": "reaction",
+      "name": "Carbon Dioxide Formation",
+      "inputs": [
+        { "id": "carbon", "count": 1 },
+        { "id": "oxygen", "count": 2 }
+      ],
+      "processIds": [],
+      "conditionIds": ["high_temperature"],
+      "outputs": [{ "id": "carbon_dioxide", "count": 1 }],
+      "requirements": {
+        "technologies": ["basic_chemistry"],
+        "worldFlags": []
+      },
+      "energy": {
+        "type": "exothermic",
+        "value": -393
       },
       "gameplay": {
         "discoverable": true,
         "repeatable": true,
         "discoveryPoints": 10
       },
-      "links": {
+      "rewards": {
+        "knowledgePoints": 10,
+        "worldEffects": [],
+        "encyclopediaEntries": ["carbon_dioxide"]
+      }
+    },
+    {
+      "id": "ammonia_synthesis",
+      "type": "reaction",
+      "name": "Ammonia Synthesis",
+      "inputs": [
+        { "id": "nitrogen", "count": 1 },
+        { "id": "hydrogen", "count": 3 }
+      ],
+      "processIds": [],
+      "conditionIds": ["high_pressure"],
+      "outputs": [{ "id": "ammonia", "count": 1 }],
+      "requirements": {
         "technologies": ["basic_chemistry"],
-        "encyclopediaEntryId": "water_synthesis"
+        "worldFlags": []
+      },
+      "energy": {
+        "type": "exothermic",
+        "value": -46
+      },
+      "gameplay": {
+        "discoverable": true,
+        "repeatable": true,
+        "discoveryPoints": 14
+      },
+      "rewards": {
+        "knowledgePoints": 14,
+        "worldEffects": [],
+        "encyclopediaEntries": ["ammonia"]
+      }
+    },
+    {
+      "id": "prebiotic_synthesis",
+      "type": "reaction",
+      "name": "Prebiotic Synthesis",
+      "inputs": [
+        { "id": "water", "count": 1 },
+        { "id": "carbon_dioxide", "count": 1 },
+        { "id": "ammonia", "count": 1 }
+      ],
+      "processIds": ["prebiotic_cycle"],
+      "conditionIds": ["electric_spark"],
+      "outputs": [{ "id": "organic_precursors", "count": 1 }],
+      "requirements": {
+        "technologies": ["prebiotic_chemistry"],
+        "worldFlags": ["has_oceans"]
+      },
+      "energy": {
+        "type": "endothermic",
+        "value": 125
+      },
+      "gameplay": {
+        "discoverable": true,
+        "repeatable": true,
+        "discoveryPoints": 24
+      },
+      "rewards": {
+        "knowledgePoints": 24,
+        "worldEffects": ["seed_prebiotic_chemistry"],
+        "encyclopediaEntries": ["organic_precursors"]
+      }
+    },
+    {
+      "id": "oxygen_release",
+      "type": "reaction",
+      "name": "Oxygen Release",
+      "inputs": [
+        { "id": "water", "count": 1 },
+        { "id": "carbon_dioxide", "count": 1 }
+      ],
+      "processIds": ["photosynthesis"],
+      "conditionIds": ["sunlight"],
+      "outputs": [{ "id": "oxygen", "count": 2 }],
+      "requirements": {
+        "technologies": ["photosynthesis"],
+        "worldFlags": ["has_organic_precursors"]
+      },
+      "energy": {
+        "type": "endothermic",
+        "value": 280
+      },
+      "gameplay": {
+        "discoverable": true,
+        "repeatable": true,
+        "discoveryPoints": 18
+      },
+      "rewards": {
+        "knowledgePoints": 18,
+        "worldEffects": ["oxygenate_biosphere"],
+        "encyclopediaEntries": ["photosynthesis"]
       }
     }
   ]

@@ -9,7 +9,7 @@
       "name": "Water",
       "category": "inorganic",
       "state": "liquid",
-      "description": "A basic compound required for atmosphere, oceans and life systems.",
+      "description": "A stable liquid compound that enables oceans, climate cycles and life.",
       "composition": {
         "parts": [
           { "id": "hydrogen", "count": 2 },
@@ -17,7 +17,7 @@
         ]
       },
       "card": {
-        "color": "#4FC3F7",
+        "color": "#37c5ff",
         "icon": "H2O",
         "rarity": "common"
       },
@@ -29,12 +29,102 @@
       "gameplay": {
         "unlockedByDefault": false,
         "canBeUsedInLab": true,
-        "discoveryPoints": 5
+        "discoveryPoints": 6,
+        "startingQuantity": 0
+      }
+    },
+    {
+      "id": "carbon_dioxide",
+      "type": "compound",
+      "formula": "CO2",
+      "name": "Carbon Dioxide",
+      "category": "gas",
+      "state": "gas",
+      "description": "A greenhouse gas that helps stabilize an early atmosphere.",
+      "composition": {
+        "parts": [
+          { "id": "carbon", "count": 1 },
+          { "id": "oxygen", "count": 2 }
+        ]
       },
-      "links": {
-        "reactions": ["water_synthesis", "electrolysis_of_water"],
-        "technologies": ["water_technology", "atmosphere"],
-        "encyclopediaEntryId": "water"
+      "card": {
+        "color": "#848fa8",
+        "icon": "CO2",
+        "rarity": "common"
+      },
+      "properties": {
+        "molecularMass": 44.01,
+        "meltingPointC": -78.5,
+        "boilingPointC": -56.6
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 6,
+        "startingQuantity": 0
+      }
+    },
+    {
+      "id": "ammonia",
+      "type": "compound",
+      "formula": "NH3",
+      "name": "Ammonia",
+      "category": "gas",
+      "state": "gas",
+      "description": "A nitrogen-rich compound useful in prebiotic chemistry.",
+      "composition": {
+        "parts": [
+          { "id": "nitrogen", "count": 1 },
+          { "id": "hydrogen", "count": 3 }
+        ]
+      },
+      "card": {
+        "color": "#89d6c0",
+        "icon": "NH3",
+        "rarity": "uncommon"
+      },
+      "properties": {
+        "molecularMass": 17.031,
+        "meltingPointC": -77.7,
+        "boilingPointC": -33.3
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 8,
+        "startingQuantity": 0
+      }
+    },
+    {
+      "id": "organic_precursors",
+      "type": "compound",
+      "formula": "CHON",
+      "name": "Organic Precursors",
+      "category": "organic",
+      "state": "mixed",
+      "description": "A pool of carbon-rich molecules from which life can emerge.",
+      "composition": {
+        "parts": [
+          { "id": "water", "count": 1 },
+          { "id": "carbon_dioxide", "count": 1 },
+          { "id": "ammonia", "count": 1 }
+        ]
+      },
+      "card": {
+        "color": "#6cd186",
+        "icon": "CHON",
+        "rarity": "rare"
+      },
+      "properties": {
+        "molecularMass": null,
+        "meltingPointC": null,
+        "boilingPointC": null
+      },
+      "gameplay": {
+        "unlockedByDefault": false,
+        "canBeUsedInLab": true,
+        "discoveryPoints": 14,
+        "startingQuantity": 0
       }
     }
   ]

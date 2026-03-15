@@ -1,0 +1,15 @@
+.page--home .hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.page--home .hero::after {
+  content: '';
+  position: absolute;
+  right: -60px;
+  bottom: -90px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(54, 194, 255, 0.3), transparent 70%);
+}

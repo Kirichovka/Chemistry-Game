@@ -3,30 +3,264 @@
   "entity": "technology",
   "items": [
     {
+      "id": "basic_chemistry",
+      "type": "technology",
+      "name": "Basic Chemistry",
+      "category": "chemistry",
+      "description": "Foundational laboratory practice for combining elemental matter.",
+      "autoUnlock": true,
+      "costKnowledge": 0,
+      "requirements": {
+        "technologies": [],
+        "cards": [],
+        "knowledgePoints": 0,
+        "worldStageId": null
+      },
+      "triggers": {
+        "reactions": [],
+        "tests": []
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "worldEffects": [],
+        "encyclopediaEntries": []
+      },
+      "ui": {
+        "tier": 0,
+        "branch": "chemistry",
+        "position": { "x": 0, "y": 0 }
+      }
+    },
+    {
       "id": "water_technology",
       "type": "technology",
-      "name": "Water technology",
-      "category": "planet",
-      "description": "Unlocks water-based planetary development.",
+      "name": "Water Chemistry",
+      "category": "chemistry",
+      "description": "Understanding water unlocks a stable hydrological future.",
+      "autoUnlock": true,
+      "costKnowledge": 0,
       "requirements": {
         "technologies": ["basic_chemistry"],
         "cards": ["water"],
-        "knowledgePoints": 50
+        "knowledgePoints": 0,
+        "worldStageId": null
       },
-      "unlockedBy": {
+      "triggers": {
         "reactions": ["water_synthesis"],
         "tests": []
       },
       "rewards": {
         "unlockedCards": [],
-        "unlockedTechnologies": ["ocean_formation"],
-        "worldEffects": ["enable_water_system"],
+        "worldEffects": [],
         "encyclopediaEntries": ["water"]
       },
       "ui": {
         "tier": 1,
+        "branch": "chemistry",
+        "position": { "x": 1, "y": 0 }
+      }
+    },
+    {
+      "id": "atmosphere_engineering",
+      "type": "technology",
+      "name": "Atmosphere Engineering",
+      "category": "planet",
+      "description": "Carbon chemistry lets you trap heat and protect the young world.",
+      "autoUnlock": true,
+      "costKnowledge": 0,
+      "requirements": {
+        "technologies": ["basic_chemistry"],
+        "cards": ["carbon_dioxide"],
+        "knowledgePoints": 0,
+        "worldStageId": null
+      },
+      "triggers": {
+        "reactions": ["carbon_dioxide_synthesis"],
+        "tests": []
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "worldEffects": ["stabilize_atmosphere"],
+        "encyclopediaEntries": ["atmosphere"]
+      },
+      "ui": {
+        "tier": 1,
         "branch": "planet",
-        "position": { "x": 100, "y": 200 }
+        "position": { "x": 1, "y": 1 }
+      }
+    },
+    {
+      "id": "ocean_formation",
+      "type": "technology",
+      "name": "Ocean Formation",
+      "category": "planet",
+      "description": "Use water and atmospheric balance to build a lasting water world.",
+      "autoUnlock": false,
+      "costKnowledge": 20,
+      "requirements": {
+        "technologies": ["water_technology", "atmosphere_engineering"],
+        "cards": ["water"],
+        "knowledgePoints": 20,
+        "worldStageId": "atmosphere_world"
+      },
+      "triggers": {
+        "reactions": [],
+        "tests": ["test_water_basic"]
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "worldEffects": ["condense_oceans"],
+        "encyclopediaEntries": ["water_world"]
+      },
+      "ui": {
+        "tier": 2,
+        "branch": "planet",
+        "position": { "x": 2, "y": 1 }
+      }
+    },
+    {
+      "id": "prebiotic_chemistry",
+      "type": "technology",
+      "name": "Prebiotic Chemistry",
+      "category": "life",
+      "description": "Repeated cycles of water, gases and energy can generate complex organics.",
+      "autoUnlock": false,
+      "costKnowledge": 30,
+      "requirements": {
+        "technologies": ["ocean_formation"],
+        "cards": ["ammonia", "water", "carbon_dioxide"],
+        "knowledgePoints": 30,
+        "worldStageId": "water_world"
+      },
+      "triggers": {
+        "reactions": [],
+        "tests": ["test_pressure_mastery"]
+      },
+      "rewards": {
+        "unlockedCards": ["prebiotic_cycle"],
+        "worldEffects": [],
+        "encyclopediaEntries": ["prebiotic_chemistry"]
+      },
+      "ui": {
+        "tier": 3,
+        "branch": "life",
+        "position": { "x": 3, "y": 2 }
+      }
+    },
+    {
+      "id": "microbial_life",
+      "type": "technology",
+      "name": "Microbial Life",
+      "category": "life",
+      "description": "Organic precursors tip into self-sustaining living chemistry.",
+      "autoUnlock": true,
+      "costKnowledge": 0,
+      "requirements": {
+        "technologies": ["prebiotic_chemistry"],
+        "cards": ["organic_precursors"],
+        "knowledgePoints": 0,
+        "worldStageId": "water_world"
+      },
+      "triggers": {
+        "reactions": ["prebiotic_synthesis"],
+        "tests": []
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "worldEffects": [],
+        "encyclopediaEntries": ["life_world"]
+      },
+      "ui": {
+        "tier": 4,
+        "branch": "life",
+        "position": { "x": 4, "y": 2 }
+      }
+    },
+    {
+      "id": "photosynthesis",
+      "type": "technology",
+      "name": "Photosynthesis",
+      "category": "life",
+      "description": "Sunlight-powered chemistry turns a living world into an oxygenating biosphere.",
+      "autoUnlock": false,
+      "costKnowledge": 35,
+      "requirements": {
+        "technologies": ["microbial_life"],
+        "cards": ["organic_precursors"],
+        "knowledgePoints": 35,
+        "worldStageId": "water_world"
+      },
+      "triggers": {
+        "reactions": [],
+        "tests": ["test_prebiotic_chain"]
+      },
+      "rewards": {
+        "unlockedCards": ["photosynthesis"],
+        "worldEffects": [],
+        "encyclopediaEntries": ["photosynthesis"]
+      },
+      "ui": {
+        "tier": 5,
+        "branch": "life",
+        "position": { "x": 5, "y": 2 }
+      }
+    },
+    {
+      "id": "metallurgy",
+      "type": "technology",
+      "name": "Metallurgy",
+      "category": "civilization",
+      "description": "Controlled heat and minerals unlock durable tools and structures.",
+      "autoUnlock": false,
+      "costKnowledge": 45,
+      "requirements": {
+        "technologies": ["photosynthesis"],
+        "cards": [],
+        "knowledgePoints": 45,
+        "worldStageId": "life_world"
+      },
+      "triggers": {
+        "reactions": ["oxygen_release"],
+        "tests": []
+      },
+      "rewards": {
+        "unlockedCards": ["iron", "smelting"],
+        "worldEffects": [],
+        "encyclopediaEntries": ["iron"]
+      },
+      "ui": {
+        "tier": 6,
+        "branch": "civilization",
+        "position": { "x": 6, "y": 3 }
+      }
+    },
+    {
+      "id": "civil_engineering",
+      "type": "technology",
+      "name": "Civil Engineering",
+      "category": "civilization",
+      "description": "Metal tools and shared knowledge let civilization transform the planet.",
+      "autoUnlock": false,
+      "costKnowledge": 60,
+      "requirements": {
+        "technologies": ["metallurgy"],
+        "cards": ["iron"],
+        "knowledgePoints": 60,
+        "worldStageId": "life_world"
+      },
+      "triggers": {
+        "reactions": [],
+        "tests": ["test_world_chain"]
+      },
+      "rewards": {
+        "unlockedCards": [],
+        "worldEffects": ["establish_civilization"],
+        "encyclopediaEntries": ["civilization_world"]
+      },
+      "ui": {
+        "tier": 7,
+        "branch": "civilization",
+        "position": { "x": 7, "y": 3 }
       }
     }
   ]

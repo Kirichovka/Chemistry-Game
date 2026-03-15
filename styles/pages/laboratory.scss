@@ -1,0 +1,8 @@
+.page--laboratory .panel {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page--laboratory .card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}

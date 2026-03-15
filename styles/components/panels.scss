@@ -1,0 +1,94 @@
+.branch-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.branch {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.branch__title {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.branch-chemistry {
+  background: linear-gradient(
+    135deg,
+    rgba(54, 194, 255, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.branch-planet {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 156, 84, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.branch-life {
+  background: linear-gradient(
+    135deg,
+    rgba(114, 211, 132, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.branch-civilization {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 214, 109, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal__card {
+  position: relative;
+  z-index: 1;
+  width: min(560px, calc(100vw - 2rem));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.modal__title {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.modal__description {
+  margin: var(--space-3) 0 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.modal__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+}

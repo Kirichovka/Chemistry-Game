@@ -3,48 +3,148 @@
   "entity": "worldStage",
   "items": [
     {
-      "id": "primitive_ocean_world",
+      "id": "dead_planet",
       "type": "worldStage",
-      "name": "Primitive Ocean World",
-      "order": 2,
+      "name": "Dead Planet",
+      "order": 1,
       "category": "planet",
-      "description": "A young planet with stable water, atmosphere and primitive chemical cycles.",
-      "entryRequirements": {
-        "requiredTechnologies": ["water_technology", "atmosphere_stabilization"],
-        "requiredCards": ["water", "carbon_dioxide"],
-        "requiredWorldFlags": ["has_liquid_water"],
+      "description": "A barren world with little atmosphere, no water cycle and no life.",
+      "requirements": {
+        "worldFlags": [],
         "minimumParameters": {
-          "temperature": -10,
-          "pressure": 0.8,
-          "waterLevel": 40
-        }
+          "atmosphere": 0,
+          "oxygen": 0,
+          "water": 0,
+          "temperature": -999,
+          "lifeComplexity": 0,
+          "civilization": 0
+        },
+        "technologies": []
       },
-      "worldState": {
-        "environment": {
-          "atmosphere": "dense",
-          "temperatureRange": { "min": -20, "max": 60 },
-          "waterState": "liquid",
-          "surfaceType": "rock_ocean"
-        },
-        "visuals": {
-          "sky": "cloudy_blue",
-          "surface": "oceanic",
-          "effects": ["clouds", "fog"]
-        },
-        "simulationFlags": [
-          "enable_water_cycle",
-          "enable_basic_climate"
-        ]
+      "visuals": {
+        "sky": "amber",
+        "surface": "cratered",
+        "accent": "#ff8a57"
       },
       "rewards": {
-        "unlockedTechnologies": ["organic_chemistry"],
-        "unlockedTests": ["test_water_cycle"],
-        "unlockedEntries": ["water_cycle"],
-        "grantedWorldFlags": ["stable_hydrosphere"]
+        "unlockedTests": [],
+        "encyclopediaEntries": []
+      }
+    },
+    {
+      "id": "atmosphere_world",
+      "type": "worldStage",
+      "name": "Atmosphere",
+      "order": 2,
+      "category": "planet",
+      "description": "The planet develops a stable atmosphere and begins to retain heat.",
+      "requirements": {
+        "worldFlags": ["has_atmosphere"],
+        "minimumParameters": {
+          "atmosphere": 30,
+          "oxygen": 0,
+          "water": 0,
+          "temperature": 60,
+          "lifeComplexity": 0,
+          "civilization": 0
+        },
+        "technologies": ["atmosphere_engineering"]
       },
-      "links": {
-        "previousStageId": "hot_barren_planet",
-        "nextStageIds": ["prebiotic_world"]
+      "visuals": {
+        "sky": "blue-haze",
+        "surface": "volcanic",
+        "accent": "#66a6ff"
+      },
+      "rewards": {
+        "unlockedTests": [],
+        "encyclopediaEntries": ["atmosphere"]
+      }
+    },
+    {
+      "id": "water_world",
+      "type": "worldStage",
+      "name": "Water World",
+      "order": 3,
+      "category": "planet",
+      "description": "Liquid water covers the surface and the climate starts to stabilize.",
+      "requirements": {
+        "worldFlags": ["has_liquid_water"],
+        "minimumParameters": {
+          "atmosphere": 30,
+          "oxygen": 0,
+          "water": 40,
+          "temperature": 0,
+          "lifeComplexity": 0,
+          "civilization": 0
+        },
+        "technologies": ["ocean_formation"]
+      },
+      "visuals": {
+        "sky": "storm-blue",
+        "surface": "oceanic",
+        "accent": "#3cc8ff"
+      },
+      "rewards": {
+        "unlockedTests": ["test_pressure_mastery"],
+        "encyclopediaEntries": ["water_world"]
+      }
+    },
+    {
+      "id": "life_world",
+      "type": "worldStage",
+      "name": "Life",
+      "order": 4,
+      "category": "life",
+      "description": "Self-sustaining life and oxygen-rich cycles transform the planet.",
+      "requirements": {
+        "worldFlags": ["has_organic_precursors", "has_oxygen_cycle"],
+        "minimumParameters": {
+          "atmosphere": 35,
+          "oxygen": 30,
+          "water": 40,
+          "temperature": -50,
+          "lifeComplexity": 45,
+          "civilization": 0
+        },
+        "technologies": ["photosynthesis"]
+      },
+      "visuals": {
+        "sky": "emerald",
+        "surface": "verdant",
+        "accent": "#79de8b"
+      },
+      "rewards": {
+        "unlockedTests": ["test_prebiotic_chain"],
+        "encyclopediaEntries": ["life_world"]
+      }
+    },
+    {
+      "id": "civilization_world",
+      "type": "worldStage",
+      "name": "Civilization",
+      "order": 5,
+      "category": "civilization",
+      "description": "Knowledge, tools and infrastructure give rise to planetary civilization.",
+      "requirements": {
+        "worldFlags": ["has_civilization"],
+        "minimumParameters": {
+          "atmosphere": 35,
+          "oxygen": 35,
+          "water": 40,
+          "temperature": -100,
+          "lifeComplexity": 55,
+          "civilization": 50
+        },
+        "technologies": ["civil_engineering"]
+      },
+      "visuals": {
+        "sky": "golden",
+        "surface": "engineered",
+        "accent": "#f4d98b"
+      },
+      "rewards": {
+        "unlockedTests": [],
+        "encyclopediaEntries": ["civilization_world"]
       }
     }
   ]
